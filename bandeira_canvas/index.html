@@ -1,0 +1,54 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Bandeira Brasil</title>
+</head>
+<body>
+
+    <h1>Bandeira Brasil</h1>
+
+    <div id="quadrado" style="
+        width: 300px;
+        height: 200px;
+        border: 3px solid darkred;
+        background-color: #eeeeee;
+    ">
+    </div>
+
+    <button onclick="mostrarBandeira()" style="font-size: 18px; padding: 8px 20px;">
+        Brasil
+    </button>
+
+    <script>
+        function mostrarBandeira() {
+
+            document.getElementById("quadrado").innerHTML =
+            '<canvas id="canvas" width="300" height="200"></canvas>';
+
+            let canvas = document.getElementById("canvas");
+            let ctx = canvas.getContext("2d");
+
+            ctx.fillStyle = "#228B22";
+            ctx.fillRect(0, 0, 300, 200);
+
+            ctx.fillStyle = "#FFD700";
+            ctx.beginPath();
+            ctx.moveTo(150, 20);
+            ctx.lineTo(280, 100);
+            ctx.lineTo(150, 180);
+            ctx.lineTo(20, 100);
+            ctx.fill();
+
+            ctx.fillStyle = "#191970";
+            ctx.beginPath();
+            ctx.arc(150, 100, 40, 0, 2 * Math.PI);
+            ctx.fill();
+
+        }
+    </script>
+
+</body>
+</html>
+
+<!-- RODOU ESSA BOSTA -->
